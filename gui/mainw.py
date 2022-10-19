@@ -37,7 +37,7 @@ class MainWindow(QWidget):
         self.show()
 
     def initialize_settings_data(self):
-        self.__size = 1
+        self.__size = 12
         self.__cbox = [True, True, True, True]
 
     def get_settings_data(self) -> tuple[int, bool, bool, bool, bool]:
@@ -94,7 +94,7 @@ class MainWindow(QWidget):
         size_label = QLabel("Size")
         size_spin = QSpinBox()
         size_spin.setRange(1, 150)
-        size_spin.setValue(1)
+        size_spin.setValue(self.__size)
         size_spin.valueChanged.connect(handle_changed)
 
         hbox.addWidget(size_label)
